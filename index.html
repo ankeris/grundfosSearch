@@ -5,11 +5,11 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
 </head>
 <body>
-	<div id="app">
-  <div class="search-wrapper">
+<main id="app">
+  <figure class="search-wrapper">
       <input type="text" v-model="keyword" placeholder="Search Title..."/>
-  </div>
-  <div class="wrapper">
+  </figure>
+  <section class="wrapper">
     <div class="card" v-for="post in filteredList">
       <a v-bind:href="post.link" target="_blank">
         <img v-bind:src="post.img"></img>
@@ -18,8 +18,8 @@
       {{post.title}}
       </a>
     </div>
-  </div>
-</div>
+  </section>
+</main>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.js"></script>

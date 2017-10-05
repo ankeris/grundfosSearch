@@ -7,16 +7,16 @@ html, body {
   margin-bottom: 16px;
 }
 
-div#app {
+main#app {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-div#app .search-wrapper {
+main#app .search-wrapper {
   position: relative;
 }
-div#app .search-wrapper label {
+main#app .search-wrapper label {
   position: absolute;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.5);
@@ -25,42 +25,42 @@ div#app .search-wrapper label {
   z-index: -1;
   transition: .15s all ease-in-out;
 }
-div#app .search-wrapper input {
+main#app .search-wrapper input {
   padding: 4px 12px;
   color: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(0, 0, 0, 0.12);
   transition: .15s all ease-in-out;
   background: white;
 }
-div#app .search-wrapper input:focus {
+main#app .search-wrapper input:focus {
   outline: none;
   transform: scale(1.05);
 }
-div#app .search-wrapper input:focus + label {
+main#app .search-wrapper input:focus + label {
   font-size: 10px;
   transform: translateY(-24px) translateX(-12px);
 }
-div#app .search-wrapper input::-webkit-input-placeholder {
+main#app .search-wrapper input::-webkit-input-placeholder {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.5);
   font-weight: 100;
 }
-div#app .wrapper {
+main#app .wrapper {
   display: flex;
   max-width: 444px;
   flex-wrap: wrap;
   padding-top: 12px;
 }
-div#app .card {
+main#app .card {
   box-shadow: rgba(0, 0, 0, 0.11765) 0px 1px 6px, rgba(0, 0, 0, 0.11765) 0px 1px 4px;
   max-width: 124px;
   margin: 12px;
   transition: .15s all ease-in-out;
 }
-div#app .card:hover {
+main#app .card:hover {
   transform: scale(1.1);
 }
-div#app .card a {
+main#app .card a {
   text-decoration: none;
   padding: 12px;
   color: #03A9F4;
@@ -69,20 +69,20 @@ div#app .card a {
   flex-direction: column;
   align-items: center;
 }
-div#app .card a img {
+main#app .card a img {
   height: 100px;
 }
-div#app .card a small {
+main#app .card a small {
   font-size: 10px;
   padding: 4px;
 }
-div#app .hotpink {
+main#app .hotpink {
   background: hotpink;
 }
-div#app .green {
+main#app .green {
   background: green;
 }
-div#app .box {
+main#app .box {
   width: 100px;
   height: 100px;
   border: 1px solid rgba(0, 0, 0, 0.12);
