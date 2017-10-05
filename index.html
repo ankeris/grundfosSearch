@@ -6,9 +6,11 @@
 </head>
 <body>
 <main id="app">
+
   <figure class="search-wrapper">
       <input type="text" v-model="keyword" placeholder="Search Title..."/>
   </figure>
+  <figure id="separator"><h2>Search Results<h2></figure>
   <section class="wrapper">
     <div class="card" v-for="post in filteredList">
       <a v-bind:href="post.link" target="_blank">
@@ -19,6 +21,8 @@
       </a>
     </div>
   </section>
+  <figure id="separator"><h3>Your Items<h3></figure>
+  <figure id="separator"><h4>Your latest searches<h4></figure>
 </main>
 
 
