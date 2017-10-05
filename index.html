@@ -5,31 +5,21 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
 </head>
 <body>
-	<h1>Puter Parts</h1>
-
-	  	<form>
-	    	<div class="search">
-	        	<!-- Create a binding between the searchString model and the text field -->
-
-	        	<input type="text" v-model="searchString" placeholder="Search" />
-	    	</div>
-	    </form>
-
-	    <button id="GPU" class="categories" @click="selectCategory('Graphics Card')">Graphics Cards</button>
-	    <button id="CPU" class="categories" @click="selectCategory('Processor')">Processsors</button>
-	    <button id="Mobo" class="categories" @click="selectCategory('Motherboard')">Motherboards</button>
-
-	    <ul>
-	        <!-- Render a li element for every entry in the items array. Notice
-	             the custom search filter "searchFor". It takes the value of the
-	             searchString model as an argument. -->
-	             
-	        <li v-for="i in products | searchFor searchString | filterBy selectedCategory in 'category'">
-	            <img v-bind:src="i.image" />
-	            <p>{{i.product}}</p>
-	            <p>$ {{i.price}}</p>
-	        </li>
-	    </ul>
+	<div id="app">
+  <div class="search-wrapper">
+      <input type="text" v-model="keyword" placeholder="Search Title..."/>
+  </div>
+  <div class="wrapper">
+    <div class="card" v-for="post in filteredList">
+      <a v-bind:href="post.link" target="_blank">
+        <img v-bind:src="post.img"></img>
+      <small>Posted by {{post.author}}      
+        </small>
+      {{post.title}}
+      </a>
+    </div>
+  </div>
+</div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.js"></script>
