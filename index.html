@@ -6,9 +6,8 @@
 </head>
 <body>
 <main id="app">
-
   <figure class="search-wrapper">
-      <input type="text" v-model="keyword" placeholder="Search Title..."/>
+      <input type="text" v-model="keyword" placeholder="Search..."/>
   </figure>
   <figure id="separator"><h2>Search Results<h2></figure>
   <section class="wrapper">
@@ -68,14 +67,24 @@
       	Alpha 25-40
       </a>
     </div>
-    
 </section>
 </main>
-
+<article id="description" style="display: none;">
+	dasfdasfsafasfasfs
+</article>
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript">
-	
+	function main() {
+  $(this).on('click', function(){
+    $('description').slideToggle(400);
+  })
+};
+$(document).ready(main);
 </script>
+
+<!-- vue.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.js"></script>
 <script src="js/search.js"></script>
 
